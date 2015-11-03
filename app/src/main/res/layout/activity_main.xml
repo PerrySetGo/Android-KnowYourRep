@@ -9,8 +9,54 @@
                 tools:context=".MainActivity">
 
     <TextView
-        android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Know Your Rep"
+        android:id="@+id/mainAppLabel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subheadlineText"
+        android:id="@+id/subheadlineLabel"
+        android:layout_below="@+id/mainAppLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:id="@+id/zipCodeInput"
+        android:maxLength="5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter Your Zip"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zipcodeLength"
+        android:id="@+id/zipcodeLabel"
+        android:layout_below="@+id/zipCodeInput"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Out!"
+        android:id="@+id/submitButton"
+        android:layout_below="@+id/zipcodeLabel"
+        android:layout_alignLeft="@+id/zipcodeLabel"
+        android:layout_alignStart="@+id/zipcodeLabel"
+        android:layout_marginTop="43dp"/>
 
 </RelativeLayout>
