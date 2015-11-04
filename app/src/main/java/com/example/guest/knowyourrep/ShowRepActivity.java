@@ -128,8 +128,8 @@ public class ShowRepActivity extends ListActivity {
     }
 
     private void setupContent(){
-        setListAdapter(mAdapter);
         mAdapter = new RepAdapter(this, mRepList);
+        setListAdapter(mAdapter);
     }
 
     private void alertUserAboutError() {

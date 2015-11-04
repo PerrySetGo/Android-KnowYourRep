@@ -26,13 +26,15 @@ public class RepAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.rep_list_item, null);
             holder = new ViewHolder();
             holder.nameLabel = (TextView) convertView.findViewById(R.id.nameLabel);
+            holder.partyLabel = (TextView) convertView.findViewById(R.id.partyLabel);
 
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         Representative representative = mRepList.get(position);
-        holder.nameLabel.setText(representative.getFirstName() + " " + representative.getLastName());
+        holder.nameLabel.setText("Name: " + representative.getFirstName() + " " + representative.getLastName());
+        holder.partyLabel.setText("Political Party: " + representative.getParty());
         return convertView;
     }
 
@@ -53,6 +55,7 @@ public class RepAdapter extends BaseAdapter {
 
     private static class ViewHolder {
         TextView nameLabel;
+        TextView partyLabel;
     }
 
 }
