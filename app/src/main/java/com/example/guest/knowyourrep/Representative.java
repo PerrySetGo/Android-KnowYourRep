@@ -2,11 +2,17 @@ package com.example.guest.knowyourrep;
 
 import java.io.Serializable;
 
-public class CurrentRep implements Serializable {
+public class Representative implements Serializable {
 
     private String mFirstName;
     private String mLastName;
     private String mParty;
+
+    public Representative(String firstName, String lastName, String party) {
+        mFirstName = firstName;
+        mLastName = lastName;
+        mParty = party;
+    }
 
     public String getFirstName() {
         return mFirstName;
