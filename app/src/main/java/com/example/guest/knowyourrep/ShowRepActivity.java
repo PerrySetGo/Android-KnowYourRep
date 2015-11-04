@@ -29,6 +29,7 @@ public class ShowRepActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.show_rep_activity);
         final String zipCode = getIntent().getExtras().getString("zipCode");
         getRepInfo(zipCode, new Runnable() {
             @Override
